@@ -1,5 +1,5 @@
 {
-  "name": "e-commerce-with-nextjs",
+  "name": "e-commerce-by-nextjs",
   "private": true,
   "scripts": {
     "dev": "next dev",
