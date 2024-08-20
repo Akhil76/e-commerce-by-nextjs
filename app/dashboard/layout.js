@@ -1,5 +1,5 @@
-import DashboardNav from '../components/DashboardNav';
-import DashboardSidebar from '../components/DashboardSidebar';
+import DashboardMenu from '../components/DashboardMenu';
+import DashboardNavbar from '../components/DashboardNavbar';
 
 
 
@@ -7,12 +7,13 @@ import DashboardSidebar from '../components/DashboardSidebar';
 
 export default function DashboardLayout({ children }) {
     return (
-      <div>
-        <DashboardSidebar/>
-        <DashboardNav/>
-        <div>
-        {children}
+      <div className='h-screen flex'>
+        <div className='w-[14%]'>
+            <DashboardMenu/>
         </div>
+        <div className='w-[86%]'>
+          <DashboardNavbar/>
+          {children}</div>
       </div>
     );
   }
