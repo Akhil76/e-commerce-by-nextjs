@@ -1,9 +1,9 @@
 
 
-export default function DashboardNav() {
+export default function DashboardSidebar() {
     return (
       <div className="bg-red-400">
-        <h1>DashboardNav</h1> 
+        <h1>Sidebar</h1> 
       </div>
     );
   }
