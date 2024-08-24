@@ -16,10 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="h-screen">
-          <Header/>
-          <Navigation/>
-          <div>{children}</div>
-          <Footer/>
+          {children}
         </div>
       </body>
     </html>

@@ -2,10 +2,6 @@ import DashboardMenu from '../components/DashboardMenu';
 import DashboardNavbar from '../components/DashboardNavbar';
 
 
-
-
-
-
 export default function DashboardLayout({ children }) {
     return (
       <div className='h-screen flex '>
