@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation";
 
 export default function RootLayout({ children }) {
     return (
-        <div className="h-screen">
+        <div className="">
             <Header />
             <Navigation />
             <div>{children}</div>
