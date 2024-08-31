@@ -1,15 +1,25 @@
 import Link from "next/link";
 
+const itemList =[
+  "Home",
+  "Product",
+  "About",
+  "Contact"
+  
+]
+
 
 export default function Navigation() {
     return (
-      <nav className="bg-indigo-700 shadow-lg">
-        <ul className="flex">
-          <li className="m-2 hover:text-blue-200"><Link href="/">Home</Link></li>
-          <li className="m-2"><Link href="/product">Product</Link></li>
-          <li className="m-2"><Link href="/category">Category</Link></li>
-       </ul>
+      <nav className="bg-[#232F3E] shadow-lg">
+        {
+          itemList.map((link,idx)=>{
+            return(
+              <Link href={`/${link}`} className="">{link}</Link>
+            )
+          })
+        }
       </nav>
     );
   }
-  
+ 
