@@ -7,13 +7,13 @@ import { IoSearchSharp } from "react-icons/io5";
 export default function Header() {
   return (
     <div className="bg-[#131921] text-white py-1">
-      <div className="flex items-center justify-between w-[98%] mx-auto">
-        <div className="w-[30%]">
+      <div className="flex items-center justify-between w-[95%] mx-auto">
+        <div className="w-[20%]">
           <h1 className="text-grey-400 text-[30px] p-6"><Link href="/">E-com</Link></h1>
         </div>
-        <div className="w-full flex items-center">
+        <div className=" w-[50%] flex items-center">
           <input
-            className="w-[60%] px-2 py-2 rounded-l-md text-black outline-none"
+            className=" w-full px-2 py-2 rounded-l-md text-black outline-none"
             type="text"
             placeholder="Search product"
           />
@@ -21,7 +21,7 @@ export default function Header() {
             <IoSearchSharp size={"24px"} className="text-black"/>
           </div>
         </div>
-        <div className="flex items-center justify-around w-[30%]">
+        <div className="flex items-center justify-around w-[20%]">
           <div>
             <h1>Account</h1>
           </div>
