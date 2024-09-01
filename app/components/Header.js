@@ -18,7 +18,7 @@ export default function Header() {
             placeholder="Search product"
           />
           <div className="bg-[#F3A847] p-2 rounded-r-md">
-            <IoSearchSharp size={"24px"} className="text-black"/>
+            <IoSearchSharp size={"24px"} className="text-black" />
           </div>
         </div>
         <div className="flex items-center justify-around w-[20%]">
@@ -26,13 +26,20 @@ export default function Header() {
             <h1>Account</h1>
           </div>
           <div>
-            <p>0</p>
-            <div className="flex">
-              <div>
-                <PiShoppingCartSimpleLight size={"40px"} />
+            <Link
+              href=""
+              className=""
+            >
+              <div className="hover:border border border-transparent hover:border-white p-2">
+                <p>0</p>
+                <div className="flex">
+                  <div>
+                    <PiShoppingCartSimpleLight size={"40px"} />
+                  </div>
+                  <h1 className="mt-4">cart</h1>
+                </div>
               </div>
-              <h1 className="mt-4">cart</h1>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
