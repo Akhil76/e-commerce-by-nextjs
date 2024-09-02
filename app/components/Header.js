@@ -26,12 +26,18 @@ export default function Header() {
           </div>
         </div>
         <div className="flex items-center justify-around w-[20%]">
-          <div>
-            <h1>Account</h1>
-          </div>
+          <Link
+            href="/signin"
+            className=""
+          >
+            <div className="hover:border border border-transparent hover:border-white p-2">
+              <h1>Account</h1>
+              <p className="text-bg-grey font-serif">Signup or signin</p>
+            </div>
+          </Link>
           <div>
             <Link
-              href=""
+              href="/cart"
               className=""
             >
               <div className="hover:border border border-transparent hover:border-white p-2">

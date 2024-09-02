@@ -37,7 +37,7 @@ const products = [
 
 
 
-export default function Client() {
+export default function Home() {
   return (
     <div class="bg-gray-900 py-2 min-h-screen">
       <div class="container mx-auto px-4">
