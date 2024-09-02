@@ -9,7 +9,11 @@ export default function Header() {
     <div className="bg-[#131921] text-white py-1">
       <div className="flex items-center justify-between w-[95%] mx-auto">
         <div className="w-[20%]">
-          <h1 className="text-grey-400 text-[30px] p-6"><Link href="/">E-com</Link></h1>
+          <div className="hover:border border border-transparent hover:border-white p-2">
+            <Link href="/">
+              <h1 className="text-grey-400 text-[30px] p-2">E-com</h1>
+            </Link>
+          </div>
         </div>
         <div className=" w-[50%] flex items-center">
           <input

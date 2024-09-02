@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
         <div className="">
             <Header />
             <Navigation />
-            <div>{children}</div>
+            <main>{children}</main>
             <Footer />
         </div>
     );
