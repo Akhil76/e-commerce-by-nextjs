@@ -1,111 +1,105 @@
 
 export default function SignUp() {
   return (
+    <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div class="sm:mx-auto sm:w-full sm:max-w-md">
 
-    <div class="h-full bg-gray-400 dark:bg-gray-900">
-      <div class="mx-auto">
-        <div class="flex justify-center px-6 py-12">
-          <div class="w-full xl:w-3/4 lg:w-11/12 flex">
-            <div class="w-full lg:w-7/12 bg-white dark:bg-gray-700 p-5 rounded-lg lg:rounded-l-none">
-              <h3 class="py-4 text-2xl text-center text-gray-800 dark:text-white">Create an Account!</h3>
-              <form class="px-8 pt-6 pb-8 mb-4 bg-white dark:bg-gray-800 rounded">
-                <div class="mb-4 md:flex md:justify-around">
-                  <div class="mb-4 md:mr-2 md:mb-0">
-                    <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="email">
-                      Email
-                    </label>
-                    <input
-                      class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      id="email"
-                      type="email"
-                      placeholder="Email"
-                    />
-                  </div>
-                  <div class="md:ml-2">
-                    <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="lastName">
-                      UserName
-                    </label>
-                    <input
-                      class="w-full px-3 py-2 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      id="UserName"
-                      type="text"
-                      placeholder="UserName"
-                    />
-                  </div>
-                </div>
-                <div class="mb-4 md:flex md:justify-around">
-                  <div class="mb-4 md:mr-2 md:mb-0">
-                    <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="password">
-                      Password
-                    </label>
-                    <input
-                      class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 dark:text-white border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      id="password"
-                      type="password"
-                      placeholder="******************"
-                    />
-                    <p class="text-xs italic text-red-500">Please choose a password.</p>
-                  </div>
-                  <div class="md:ml-2">
-                    <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="c_password">
-                      Confirm Password
-                    </label>
-                    <input
-                      class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      id="c_password"
-                      type="password"
-                      placeholder="******************"
-                    />
-                  </div>
-                </div>
-                <div class="mb-4 lg:ml-5  md:ml-[90px]">
-                  <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="JobTitle">
-                    Job Title
-                  </label>
-                  <input
-                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                    id="JobTitle"
-                    type="text"
-                    placeholder="Enter your expected Job title"
-                  />
-                </div>
-                <div class="mb-4 lg:ml-5 md:ml-[90px]">
-                  <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="JobType">
-                    Job Type
-                  </label>
-                  <input
-                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                    id="JobType"
-                    type="text"
+        <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
+          Create a new account
+        </h2>
+        <p class="mt-2 text-center text-sm leading-5 text-gray-500 max-w">
+          Or
+          <a href="/signin"
+            class="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+          >
+            login to your account
+          </a>
+        </p>
+      </div>
 
-                  />
+      <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+          <form method="POST" action="#">
+            <div>
+              <label for="email" class="block text-sm font-medium leading-5  text-gray-700">Name</label>
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <input id="name" name="name" placeholder="John Doe" type="text" required=""
+                  class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 text-black"
+                />
+                <div class="hidden absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                  <svg class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                      clip-rule="evenodd">
+                    </path>
+                  </svg>
                 </div>
-                <div class="mb-4 lg:ml-5 md:ml-[90px]">
-                  <label class="block text-sm font-bold text-gray-700 dark:text-white" for="JobType">
-                    Work Authorization
-                  </label>
-                  <label class="mt-5 mb-6 flex content-start"><input type="checkbox" name="H1B" class="mr-2 form-checkbox rounded-none ring-0 focus:border-tan-500 border-tan-300 border-2 w-5 h-5 text-highlight"/>
-                    <span class="text-sm font-semibold">H1B sponsorship</span>
-                  </label>
-                </div>
-                <div class="mb-6 text-center">
-                  <button
-                    class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 dark:bg-blue-700 dark:text-white dark:hover:bg-blue-900 focus:outline-none focus:shadow-outline"
-                    type="button"
-                  >
-                    Register Account
-                  </button>
-                </div>
-                <hr class="mb-6 border-t" />
-                <div class="text-center">
-                  <a class="inline-block text-sm text-blue-500 dark:text-blue-500 align-baseline hover:text-blue-800"
-                    href="./index.html">
-                    Already have an account? Login!
-                  </a>
-                </div>
-              </form>
+              </div>
             </div>
-          </div>
+
+            <div class="mt-6">
+              <label for="username" class="block text-sm font-medium leading-5 text-gray-700">Username</label>
+              <div class="mt-1 flex rounded-md shadow-sm">
+                <span
+                  class="inline-flex h-10 items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
+                  iworkedon.com/
+                </span>
+                <input id="username" name="username" placeholder="john" type="text" required=""
+                  class="flex-1  border border-gray-300 form-input pl-3 block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5 text-black"
+                />
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <label for="email" class="block text-sm font-medium leading-5 text-gray-700">
+                Email address
+              </label>
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <input id="email" name="email" placeholder="user@example.com" type="email"
+                  required=""
+                  class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 text-black"
+                />
+                <div class="hidden absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                  <svg class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <label for="password" class="block text-sm font-medium leading-5 text-gray-700">
+                Password
+              </label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input id="password" name="password" type="password" required=""
+                  class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 text-black" />
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <label for="password_confirmation" class="block text-sm font-medium leading-5 text-gray-700">
+                Confirm Password
+              </label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input id="password_confirmation" name="password_confirmation" type="password" required=""
+                  class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 text-black"
+                />
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <span class="block w-full rounded-md shadow-sm">
+                <button type="submit"
+                  class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                  Create account
+                </button>
+              </span>
+            </div>
+          </form>
+
         </div>
       </div>
     </div>
