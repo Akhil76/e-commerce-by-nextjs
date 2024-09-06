@@ -11,7 +11,7 @@ export default function Cart() {
             <div class="p-6 bg-white shadow-[0_0px_4px_0px_rgba(6,81,237,0.2)] rounded-md relative">
               <div class="flex items-center max-sm:flex-col gap-4 max-sm:gap-6">
                 <div class="w-52 shrink-0">
-                  <img src='https://readymadeui.com/images/laptop2.webp' class="w-full h-full object-contain" />
+                  <img src='/samsung.jpg' class="w-full h-full object-contain" />
                 </div>
                 <div class="sm:border-l sm:pl-4 sm:border-gray-300 w-full">
                   <h3 class="text-xl font-bold text-gray-800">HP ProBook 455 (15.6) 39.6 cm G9 Business Laptop</h3>

@@ -32,3 +32,9 @@
 </div>
   ))
 }
+
+// <script>
+//function changeImage(src) {
+//        document.getElementById('mainImage').src = src;
+//    }
+// </script>
