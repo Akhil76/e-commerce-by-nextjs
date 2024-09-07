@@ -7,18 +7,39 @@ const itemList =[
   "Contact"
   
 ]
-
-
+const menuItems =[
+      {
+        Id:"1",
+        label:"Home",
+        href:"/"
+      },
+      {
+        Id:"21",
+        label:"Electronics",
+        href:"/electronics"
+      },
+      {
+        Id:"21",
+        label:"Furnitures",
+        href:"/furnitures"
+      },
+      {
+        Id:"3",
+        label:"About",
+        href:"/about"
+      },
+    ]
+ 
 export default function Navigation() {
     return (
       <nav className="w-full bg-[#232F3E] text-white py-2">
         {
-          itemList.map((link,idx)=>{
+          menuItems.map((item)=>{
             return(
               <Link 
-              href={`/${link}`}
+              href={item.href}
               className="mx-2 hover:border border border-transparent hover:border-white p-2"
-              >{link}</Link>
+              >{item.label}</Link>
             )
           })
         }

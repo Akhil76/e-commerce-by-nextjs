@@ -6,8 +6,8 @@ import Link from "next/link";
 export default function SignIn() {
   return (
     <div class="bg-gray-50 font-[sans-serif]">
-      <div class="min-h-screen flex flex-col items-center justify-center  px-4">
-        <div class="max-w-md w-full">
+      <div class="min-h-screen flex flex-col items-center justify-start px-4">
+        <div class="max-w-md w-full mt-28">
 
           <div class="p-8 rounded-2xl bg-white shadow">
             <h2 class="text-gray-800 text-center text-2xl font-bold">Sign in</h2>

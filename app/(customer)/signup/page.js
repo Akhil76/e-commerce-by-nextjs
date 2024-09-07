@@ -1,16 +1,16 @@
 
 export default function SignUp() {
   return (
-    <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="min-h-screen bg-gray-50 flex flex-col sm:px-6 lg:px-8">
+      <div class="sm:mx-auto sm:w-full sm:max-w-md mt-5">
 
-        <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
+        <h2 class="text-center text-3xl leading-9 font-extrabold text-gray-900">
           Create a new account
         </h2>
         <p class="mt-2 text-center text-sm leading-5 text-gray-500 max-w">
           Or
           <a href="/signin"
-            class="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+            class="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:underline transition ease-in-out duration-150 ml-1"
           >
             login to your account
           </a>

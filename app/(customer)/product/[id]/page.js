@@ -3,15 +3,15 @@
 
 
 
-export default function Product() {
+export default function Product({params}) {
 
- 
+ const {id} = params;
 
   return (
     <div class="bg-gray-100">
       <div class="container mx-auto px-4 py-8">
         <div class="flex flex-wrap -mx-4">
-
+         
           <div class="w-full md:w-1/2 px-4 mb-8">
             <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Product"
               class="w-full h-auto rounded-lg shadow-md mb-4" id="mainImage" />
