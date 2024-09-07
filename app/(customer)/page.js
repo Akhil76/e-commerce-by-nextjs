@@ -5,6 +5,7 @@ const products = [
   {
     Id:"1",
     Name: "Iphone-12",
+    Category:"electronics",
     Description: "Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed ante justo. Integer euismod libero id mauris malesuada tinciduntamet, consectetur adipiscing elit. Sed sed ante justo. Integer euismod libero id mauris malesuada tincidunt",
     Img: "/samsung.jpg",
     Price: "29$"
@@ -12,6 +13,7 @@ const products = [
   {
     Id:"2",
     Name: "Iphone-12",
+    Category:"electronics",
     Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed ante justo. Integer euismod libero id mauris malesuada tincidunt",
     Img: "/samsung.jpg",
     Price: "29$"
@@ -19,6 +21,7 @@ const products = [
   {
     Id:"3",
     Name: "Iphone-12",
+    Category:"furnitures",
     Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed ante justo. Integer euismod libero id mauris malesuada tincidunt",
     Img: "/samsung.jpg",
     Price: "29$"
@@ -26,6 +29,7 @@ const products = [
   {
     Id:"4",
     Name: "Iphone-12",
+    Category:"furnitures",
     Description: "Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed ante justo. Integer euismod libero id mauris malesuada tincidunt adipiscing elit. Sed sed ante justo. Integer euismod libero id mauris malesuada tincidunt",
     Img: "/samsung.jpg",
     Price: "29$"
@@ -33,6 +37,7 @@ const products = [
   {
     Id:"5",
     Name: "Iphone-12",
+    Category:"furnitures",
     Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed ante justo. Integer euismod libero id mauris malesuada tincidunt",
     Img: "/samsung.jpg",
     Price: "29$"
