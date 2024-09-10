@@ -8,7 +8,7 @@ export default function Product({params}) {
  const {id} = params;
 
   return (
-    <div class="bg-gray-100">
+    <main class="bg-gray-100">
       <div class="container mx-auto px-4 py-8">
         <div class="flex flex-wrap -mx-4">
          
@@ -33,11 +33,11 @@ export default function Product({params}) {
 
 
           <div class="w-full md:w-1/2 px-4">
-            <h2 class="text-3xl font-bold mb-2">Premium Wireless Headphones</h2>
+            <h2 class="text-3xl font-bold mb-2 text-black">Premium Wireless Headphones</h2>
             <p class="text-gray-600 mb-4">SKU: WH1000XM4</p>
             <div class="mb-4">
-              <span class="text-2xl font-bold mr-2">$349.99</span>
-              <span class="text-gray-500 line-through">$399.99</span>
+              <span class="text-2xl font-bold mr-2 text-black">$349.99</span>
+              <span class="text-gray-500 line-through text-black">$399.99</span>
             </div>
             <div class="flex items-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -127,6 +127,6 @@ export default function Product({params}) {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

@@ -10,15 +10,15 @@ export default function CartProduct(props) {
         <div class="p-6 bg-white shadow-[0_0px_4px_0px_rgba(6,81,237,0.2)] rounded-md relative">
           <div class="flex items-center max-sm:flex-col gap-4 max-sm:gap-6">
             <div class="w-52 shrink-0">
-              <img src='/samsung.jpg' class="w-full h-full object-contain" />
+              <img src='/samsung.jpg' class="w-full h-full object-contain"/>
             </div>
             <div class="sm:border-l sm:pl-4 sm:border-gray-300 w-full">
               <h3 class="text-xl font-bold text-gray-800">HP ProBook 455 (15.6) 39.6 cm G9 Business Laptop</h3>
               <ul class="mt-4 text-sm text-gray-800 space-y-2">
                 <li>AMD Ryzen™ 5 processor</li>
                 <li>FreeDOS</li>
-                <li>16 GB DDR4 RAM</li>
-                <li>512 GB PCIe® NVMe™ SSD Hard Drive</li>
+                {/* <li>16 GB DDR4 RAM</li>
+                <li>512 GB PCIe® NVMe™ SSD Hard Drive</li> */}
                 <li><a href="javascript:void(0);" class="text-blue-600">(See more Specifications)</a></li>
               </ul>
               <hr class="border-gray-300 my-4" />
