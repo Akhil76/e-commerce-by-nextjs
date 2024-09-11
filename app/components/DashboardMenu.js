@@ -19,12 +19,12 @@ const menuItems = [
       },
       {
         icon: <FaBorderAll size="20"/>,
-        label: "Order",
+        label: "Orders",
         href: "/dashboard/order"
       },
       {
         icon: <AiFillProduct size="20"/>,
-        label: "Product",
+        label: "Products",
         href: "/dashboard/product"
       },
       {
