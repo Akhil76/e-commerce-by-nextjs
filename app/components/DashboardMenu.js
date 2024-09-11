@@ -68,7 +68,7 @@ export default function DashboardMenu() {
                 <Link
                   href={item.href}
                   key={item.label}
-                  className="flex item-center lg:justfy-start gap-4 text-grey-400 py-2 hover:bg-slate-500 rounded hover:text-green-400"
+                  className="flex item-center lg:justfy-start gap-4 text-grey-400 py-2 pl-2 hover:bg-slate-500 rounded hover:text-green-400"
                 >
                   <div>{item.icon}</div>
                   <span className="hidden lg:block">{item.label}</span>
