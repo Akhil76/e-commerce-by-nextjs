@@ -3,7 +3,7 @@ import { IoHome } from "react-icons/io5";
 
 
 
-export default function DashboardNavbar() {
+export default function DashboardHeader() {
     return (
       <div className="flex justify-between  bg-[#525f6d] py-2">
         <div>

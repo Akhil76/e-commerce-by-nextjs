@@ -4,13 +4,13 @@ import Link from "next/link";
 export default function Dashboard() {
   return (
     <main>
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mx-2">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
         <DashboardCard />
         <DashboardCard />
         <DashboardCard />
         <DashboardCard />
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 mx-2">
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2">
         <div className="bg-lime-800 rounded-md w-full h-96 m-r-3 my-3 shadow-md">
             <Link href="">
               <div className="p-10">

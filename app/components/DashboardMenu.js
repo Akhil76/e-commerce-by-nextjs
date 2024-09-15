@@ -59,8 +59,8 @@ export default function DashboardMenu() {
       
       {
         menuItems.map((i) => (
-          <div className="flex flex-col gap-2 mx-2" key={i.title}>
-            <span className="hidden lg:block text-grey-400 font-light my-4">
+          <div className="flex flex-col gap-2 ml-2 mx-3" key={i.title}>
+            <span className="ml-2 text-grey-400 font-light my-4">
               {i.title}
             </span>
             {
@@ -68,10 +68,10 @@ export default function DashboardMenu() {
                 <Link
                   href={item.href}
                   key={item.label}
-                  className="flex item-center lg:justfy-start gap-4 text-grey-400 py-2 pl-2 hover:bg-slate-500 rounded hover:text-green-400"
+                  className="flex item-center justfy-start gap-4 text-grey-400 py-2 pl-2 pr-14 hover:bg-slate-500 rounded hover:text-green-400"
                 >
                   <div>{item.icon}</div>
-                  <span className="hidden lg:block">{item.label}</span>
+                  <span className="">{item.label}</span>
                 </Link>
               ))
             }
