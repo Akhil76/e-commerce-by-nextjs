@@ -1,5 +1,4 @@
-"use client"; // Mark this as a Client Component
-
+"use client"; // for usestate
 import { useState } from "react";
 import Link from "next/link";
 import { IoHome } from "react-icons/io5";
@@ -9,6 +8,8 @@ import { AiFillProduct } from "react-icons/ai";
 import { IoSettingsSharp } from "react-icons/io5";
 import { BsPeopleFill } from "react-icons/bs";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io"; // Add IoIosArrowDown for collapse
+import { BiSolidMessageDetail } from "react-icons/bi";
+
 
 const menuItems = [
   {
@@ -32,12 +33,12 @@ const menuItems = [
           {
             icon: <IoHome size="20" />,
             label: "Add Product",
-            href: "/dashboard/addproduct"
+            href: "/dashboard/product/addproduct"
           },
           {
             icon: <IoHome size="20" />,
             label: "Edit Product",
-            href: "/dashboard/editproduct"
+            href: "/dashboard/product/editproduct"
           }
         ]
       },
@@ -59,10 +60,22 @@ const menuItems = [
       {
         icon: <IoSettingsSharp size="20" />,
         label: "Settings",
-        href: "/dashboard/setting"
+        href: "/dashboard/setting",
+        subitems: [
+          {
+            icon: <IoHome size="20" />,
+            label: "Slider",
+            href: "/dashboard/setting/slider"
+          },
+          {
+            icon: <IoHome size="20" />,
+            label: "Categories",
+            href: "/dashboard/setting/category"
+          }
+        ]
       },
       {
-        icon: <IoSettingsSharp size="20" />,
+        icon: <BiSolidMessageDetail size="20" />,
         label: "Messages",
         href: "/dashboard/message"
       }
@@ -96,7 +109,7 @@ export default function DashboardMenu() {
                 </Link>
                 {item.subitems && (
                   <button
-                    className="focus:outline-none"
+                    className="focus:outline-none mr-1"
                     type="button"
                     onClick={() => toggleAccordion(index)}
                   >
