@@ -1,3 +1,6 @@
+"use client"; // Mark this as a Client Component
+
+import { useState } from "react";
 import Link from "next/link";
 import { IoHome } from "react-icons/io5";
 import { FaBorderAll } from "react-icons/fa";
@@ -5,8 +8,7 @@ import { FaChartArea } from "react-icons/fa";
 import { AiFillProduct } from "react-icons/ai";
 import { IoSettingsSharp } from "react-icons/io5";
 import { BsPeopleFill } from "react-icons/bs";
-import { IoIosArrowForward } from "react-icons/io";
-
+import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io"; // Add IoIosArrowDown for collapse
 
 const menuItems = [
   {
@@ -29,14 +31,14 @@ const menuItems = [
         subitems: [
           {
             icon: <IoHome size="20" />,
-            label: "Add Prouduct",
+            label: "Add Product",
             href: "/dashboard/addproduct"
           },
           {
             icon: <IoHome size="20" />,
-            label: "Edit Prouduct",
+            label: "Edit Product",
             href: "/dashboard/editproduct"
-          },
+          }
         ]
       },
       {
@@ -48,7 +50,7 @@ const menuItems = [
         icon: <FaChartArea size="20" />,
         label: "Chart",
         href: "/dashboard/chart"
-      },
+      }
     ]
   },
   {
@@ -62,55 +64,66 @@ const menuItems = [
       {
         icon: <IoSettingsSharp size="20" />,
         label: "Messages",
-        href: "/dashoard/message"
-      },
-
+        href: "/dashboard/message"
+      }
     ]
   }
-]
-
+];
 
 export default function DashboardMenu() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <div className="mt-4 text-sm">
-
-      {
-        menuItems.map((i) => (
-          <div className="flex flex-col gap-2 ml-2 mx-5" key={i.title}>
-            <span className="ml-2 text-grey-400 font-light my-4">
-              {i.title}
-            </span>
-            {
-              i.items.map((item) => (
-                <Link
-                  href={item.href}
-                  key={item.label}
-                  className="flex justify-between text-grey-400 py-2 pl-2  hover:bg-slate-500 rounded hover:text-green-400"
-                >
-                 <div className="flex item-center justfy-start gap-4 pr-16">
+      {menuItems.map((section, sectionIndex) => (
+        <div className="flex flex-col gap-2 ml-2 mx-5" key={section.title}>
+          <span className="ml-2 text-grey-400 font-light my-4">
+            {section.title}
+          </span>
+          {section.items.map((item, index) => (
+            <div key={item.label} className="mb-2">
+              <div
+                
+                className="flex justify-between text-grey-400 py-2 pl-2 hover:bg-slate-500 rounded hover:text-green-400"
+              >
+                <Link href={item.href} className="flex items-center justify-start gap-4 pr-16">
                   <div>{item.icon}</div>
-                  <span className="">{item.label}</span>
-                 </div>
-                 {item.subitems && (
-                 <button className=""><IoIosArrowForward/></button>)}
-                  {/* <div className="">
-                    {item.subitems && (
-                      <div className="ml-4 flex-col">
-                        {item.subitems.map((sub) => (
-                          <Link href={sub.href} key={sub.label} className="flex item-center justify-start gap-2 text-grey-300 py-1 hover:text-blue-400">
-                            {sub.icon}
-                            {sub.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div> */}
+                  <span>{item.label}</span>
                 </Link>
-              ))
-            }
-          </div>
-        ))
-      }
+                {item.subitems && (
+                  <button
+                    className="focus:outline-none"
+                    type="button"
+                    onClick={() => toggleAccordion(index)}
+                  >
+                    {activeIndex === index ? <IoIosArrowDown /> : <IoIosArrowForward />}
+                  </button>
+                )}
+              </div>
+
+              {/* Submenu (Accordion) */}
+              {item.subitems && activeIndex === index && (
+                <div className="ml-8 mt-1 flex-col">
+                  {item.subitems.map((sub) => (
+                    <Link
+                      href={sub.href}
+                      key={sub.label}
+                      className="flex items-center justify-start gap-2 text-grey-300 py-2 hover:text-green-400"
+                    >
+                      {sub.icon}
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }

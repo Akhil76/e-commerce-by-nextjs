@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { IoHome } from "react-icons/io5";
-
+import { TiThMenu } from "react-icons/ti";
 
 
 export default function DashboardHeader() {
     return (
       <div className="flex justify-between  bg-[#525f6d] py-2">
-        <div>
+        <div className="flex">
+          <button className="ml-2 block sm:hidden"><TiThMenu  size="20"/></button>
           <Link href="/dashboard" className="flex gap-2 px-2 hover:text-green-400">
             <IoHome size="20" />
             Home
