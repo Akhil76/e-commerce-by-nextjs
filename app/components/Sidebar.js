@@ -3,9 +3,12 @@ import Link from 'next/link';
 import { MdDashboard } from "react-icons/md";
 
 
-export default function Sidebar() {
-    return (
-        <div className=' h-screen flex-col overflow-y-hidden bg-gray-400'>
+export default function Sidebar({open}) {
+  
+    return ( 
+        <div 
+        className={`${open ? "hidden" : "block"} sm:block h-screen flex-col overflow-y-hidden bg-gray-400`}
+        >
             <div className='p-2 m-2'>
                 <img class="mx-auto object-cover w-16 h-16 rounded-full" src="/samsung.jpg" alt="Product" />
             </div>
