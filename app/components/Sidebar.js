@@ -3,12 +3,23 @@ import Link from 'next/link';
 import { MdDashboard } from "react-icons/md";
 
 
-export default function Sidebar({open}) {
+export default function Sidebar({open,handleDrawerOpen}) {
   
     return ( 
         <div 
-        className={`${open ? "hidden" : "block"} sm:block h-screen flex-col overflow-y-hidden bg-gray-400`}
+        className={`${open? "hidden" : "block"} fixed left-0 top-0 z-[9999] sm:block sm:relative h-screen min-w-64 flex-col overflow-y-auto bg-gray-400`}
+        style={{
+            overflowY: 'scroll',
+            msOverflowStyle: 'none', 
+            scrollbarWidth: 'none'  
+          }}
         >
+            <div className="flex justify-end">
+                <button
+                className="mr-2 block sm:hidden"
+                onClick={handleDrawerOpen}
+                >x</button>
+            </div>
             <div className='p-2 m-2'>
                 <img class="mx-auto object-cover w-16 h-16 rounded-full" src="/samsung.jpg" alt="Product" />
             </div>

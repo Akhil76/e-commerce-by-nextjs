@@ -1,12 +1,6 @@
 import Link from "next/link";
 
-const itemList =[
-  "Home",
-  "Product",
-  "About",
-  "Contact"
-  
-]
+
 const menuItems =[
       {
         Id:"1",
@@ -24,9 +18,14 @@ const menuItems =[
         href:"/furnitures"
       },
       {
-        Id:"3",
-        label:"About",
-        href:"/about"
+        Id: "3",
+        label: "Furnitures",
+        href: "/furnitures",
+        submenu: [
+          { Id:"1",label: "Chairs", href: "/furnitures/chairs" },
+          { Id:"2",label: "Tables", href: "/furnitures/tables" }
+        ]
+      
       },
     ]
  
@@ -39,7 +38,9 @@ export default function Navigation() {
               <Link 
               href={item.href}
               className="mx-2 hover:border border border-transparent hover:border-white p-2"
-              >{item.label}</Link>
+              >
+                {item.label}
+              </Link>
             )
           })
         }

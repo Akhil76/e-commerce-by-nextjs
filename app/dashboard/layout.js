@@ -18,6 +18,7 @@ export default function DashboardLayout({ children }) {
         {/* <!-- ===== Sidebar Start ===== --> */}
         <Sidebar
           open={open}
+          handleDrawerOpen={handleDrawerOpen}
         />
         {/* <!-- ===== Sidebar End ===== --> */}
 
